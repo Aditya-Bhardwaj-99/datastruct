@@ -1,0 +1,233 @@
+----------------------------Linked List--------------------------
+Root added
+Node added
+Node added
+Node added
+Node added
+Node added
+Node {
+  value: 1,
+  next: Node {
+    value: 2,
+    next: Node { value: 3, next: [Node], prev: null },
+    prev: null
+  },
+  prev: null
+}
+Deleted root
+Node {
+  value: 2,
+  next: Node {
+    value: 3,
+    next: Node { value: 4, next: [Node], prev: null },
+    prev: null
+  },
+  prev: null
+}
+Node {
+  value: 5,
+  next: Node { value: 6, next: null, prev: null },
+  prev: null
+}
+2 3 5 6 
+----------------------------doubly linked list--------------------------
+Root added
+Node added
+Node added
+Node added
+Node added
+Node added
+Node {
+  value: 1,
+  next: Node {
+    value: 2,
+    next: Node { value: 3, next: [Node], prev: [Circular] },
+    prev: [Circular]
+  },
+  prev: null
+}
+Deleted root
+Node {
+  value: 2,
+  next: Node {
+    value: 3,
+    next: Node { value: 4, next: [Node], prev: [Circular] },
+    prev: [Circular]
+  },
+  prev: null
+}
+Node {
+  value: 5,
+  next: Node { value: 6, next: null, prev: [Circular] },
+  prev: Node {
+    value: 3,
+    next: [Circular],
+    prev: Node { value: 2, next: [Circular], prev: null }
+  }
+}
+2 3 5 6 
+6 5 3 2 
+----------------------------Circular linked list--------------------------
+Root added
+Node added
+Node added
+Node added
+Node added
+Node added
+Node {
+  value: 1,
+  next: Node {
+    value: 2,
+    next: Node { value: 3, next: [Node], prev: null },
+    prev: null
+  },
+  prev: null
+}
+Root deleted
+Node {
+  value: 2,
+  next: Node {
+    value: 3,
+    next: Node { value: 4, next: [Node], prev: null },
+    prev: null
+  },
+  prev: null
+}
+Node {
+  value: 5,
+  next: Node {
+    value: 6,
+    next: Node { value: 2, next: [Node], prev: null },
+    prev: null
+  },
+  prev: null
+}
+2 3 5 6 2 
+-----------------------------------Stack----------------------------------
+Stack Overflow
+5
+5
+0
+-----------------------------------Queue----------------------------------
+Queue Overflow
+1
+Node {
+  value: 5,
+  prio: undefined,
+  next: null,
+  prev: Node {
+    value: 4,
+    prio: undefined,
+    next: [Circular],
+    prev: Node { value: 3, prio: undefined, next: [Circular], prev: [Node] }
+  }
+}
+0
+-----------------------------------Priority Queue----------------------------------
+Queue Overflow
+5
+Node {
+  value: 1,
+  prio: 5,
+  next: null,
+  prev: Node {
+    value: 2,
+    prio: 4,
+    next: [Circular],
+    prev: Node { value: 3, prio: 3, next: [Circular], prev: [Node] }
+  }
+}
+0
+-----------------------------------Tree----------------------------------
+Computers & Electronics
+Notebooks
+Macbooks
+Macbook Pro
+Macbook Air
+Asus
+Routers
+Desktop Computers
+Computers & Electronics
+Notebooks
+Asus
+Routers
+Desktop Computers
+[ Node { value: 'Asus', children: [] } ]
+Node {
+  value: 'Notebooks',
+  children: [ Node { value: 'Asus', children: [] } ]
+}
+-----------------------------------Binary Search Tree----------------------------------
+in
+1
+2
+3
+4
+5
+pre
+1
+2
+3
+4
+5
+post
+5
+4
+3
+2
+1
+
+-----------------------------------Graph----------------------------------
+NORMAL
+Display
+S -> A, B, C
+A -> S, D
+B -> S, E
+C -> S, F
+D -> A, G
+E -> B, G
+F -> C, G
+G -> D, E, F
+
+BFS
+S -> A -> B -> C -> D -> E -> F -> G
+DFS
+S -> C -> F -> G -> E -> D -> B -> A
+
+PRIMS
+Display
+S -> B, C
+B -> S
+C -> S, F
+F -> C, G
+G -> F, D, E
+D -> G, A
+A -> D
+E -> G
+
+KRUSH
+Display
+S -> B, C
+A -> D
+B -> S, E
+C -> F, S
+D -> G, A
+E -> B
+F -> C, G
+G -> D, F
+
+DIJIKASTRA
+{ S: 0, A: 10, B: 5, C: 8, D: 12, E: 14, F: 11, G: 13 }
+
+ALL PAIR SHORTEST PATH
+{
+  S: { A: 10, B: 5, C: 8, S: 0, D: 12, E: 14, F: 11, G: 13 },
+  A: { S: 10, D: 2, A: 0, B: 15, C: 18, E: 24, F: 21, G: 3 },
+  B: { S: 5, E: 9, A: 15, B: 0, C: 13, D: 17, F: 16, G: 12 },
+  C: { S: 8, F: 3, A: 18, B: 13, C: 0, D: 20, E: 22, G: 9 },
+  D: { A: 2, G: 1, S: 12, B: 17, C: 20, D: 0, E: 4, F: 7 },
+  E: { B: 9, G: 3, S: 14, A: 24, C: 22, D: 4, E: 0, F: 9 },
+  F: { C: 3, G: 6, S: 11, A: 21, B: 16, D: 7, E: 9, F: 0 },
+  G: { D: 1, E: 3, F: 6, S: 13, A: 3, B: 12, C: 9, G: 0 }
+}
+--------------------------------------------------------------------------
